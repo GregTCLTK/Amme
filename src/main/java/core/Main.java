@@ -50,29 +50,7 @@ public class Main {
     public static JDA jda;
 
     public static void main(String[] args) throws IOException {
-        //Code by ZekroTJA(github.com/ZekroTJA)
-        StartArgumentHandler.args = args;
-        //MY CODE
-        builder = new JDABuilder(AccountType.BOT)
-                .setToken(SECRETS.TOKEN)
-                .setAudioEnabled(true)
-                .setAutoReconnect(true)
-                .setStatus(STATICS.STATUS)
-                .setGame(Game.of(STATICS.CUSTOM_MESSAGE + " | _help | coded by Lee", "http://twitch.tv/lordleeyt"))
-                ;
-
-        initializeListeners();
-        initializeCommands();
-        SQL.connect();
-        LVL.connect();
-
-
-        try {
-            builder.buildBlocking();
-        } catch (InterruptedException | RateLimitedException | LoginException e) {
-            e.printStackTrace();
-        }
-
+    	   System.out.println("LOL");
     }
 
     private static void initializeCommands() {
